@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/details.css">
+    <title>Student accomodation</title>
+</head>
+<body>
+
+<!-- Loading-->
+<div class="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="form-container">
+    <form id="searchForm" action="/details" method="post">
+      <h2>🔍 Search Nearby Accommodations</h2>
+      <label>📍 Enter Address</label>
+      <input type="text" name="address" required>
+
+      <label>📏 Radius (in km)</label>
+      <input type="number" min="1" name="radius" required>
+
+      <input type="hidden" id="valueField" name="value">
+
+      <label>✨ Facilities</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="AC"> AC ❄️</label>
+        <label><input type="checkbox" name="internet"> Free Internet 🌐</label>
+        <label><input type="checkbox" name="lift"> Lift 🛗</label>
+      </div>
+
+      <label>🔢 No. of Results</label>
+      <input type="number" min="1" name="no_results" placeholder="Default is 20">
+
+      <button type="submit">🚀 Search</button>
+    </form>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search); 
+    const val = urlParams.get("value");
+    document.getElementById("valueField").value = val;
+
+    document.getElementById("searchForm").addEventListener("submit", function() {
+      document.querySelector(".loading").style.display = "flex";
+    });
+  </script>
+</body>
+</html>
+<!-- window.location.search retrieves the query string from the current URL (everything after the ?).
+URLSearchParams is a built-in JavaScript object that helps parse and manipulate query strings -->

@@ -1,0 +1,20 @@
+{
+  "name": "project-sample",
+  "version": "1.0.0",
+  "description": "hostel accomodation for students",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx kill-port 2000 && nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "kill-port": "^2.0.1"
+  }
+}

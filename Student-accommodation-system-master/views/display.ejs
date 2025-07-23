@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Details</title>
+    <link rel="stylesheet" href="/css/display.css">
+</head>
+<body>
+    <% if (results.length > 0) { %>
+        <% results.forEach((result) => { %>
+            <div class="box">
+                <p><b>Name:</b> <%= result.Name %></p>
+                <p><b>Address:</b> <%= result.Address %></p>
+                <% if (result.Phone) { %>
+                    <p><b>Phone:</b> <%= result.Phone %></p>
+                <% } %>
+                <% if (result.Email) { %>
+                    <p><b>Email:</b> <%= result.Email %></p>
+                <% } %>
+                <% if (result.Website) { %>
+                    <p><b>Website:</b> <a href="<%= result.Website %>"><%= result.Website %></a></p>
+                <% } %>
+                <p><b>Approx Price:</b> <%= result.price_range %></p>
+                <p><b>Distance:</b><%= result.distance.toFixed(1) %> Kms </p>
+                <div class="button-container">
+                <button onclick="window.location.href='/location?lat=<%= result.lat %>&lon=<%= result.lon %>&name=<%= result.Name %>'">📍 View on map</button>
+                </div>
+            </div>
+        <% }); %>
+    <% } else { %>
+        <div class="Noresults"> <p>No results found.</p></div>
+    <% } %>
+    <div class="back">
+    <button onclick="window.location.href='/'">Back</button>
+    </div>
+</body>
+</html>
