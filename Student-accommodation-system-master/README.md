@@ -44,6 +44,9 @@ Each result includes:
 
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
+<img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/ade00be7-afe8-460f-a918-14b794c38512" />
+<img width="1919" height="1026" alt="image" src="https://github.com/user-attachments/assets/254ebd48-d2c9-48e6-b425-6217bf37110b" />
+<img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/2401aab6-d909-45fd-be9d-d2f65be42622" />
 
 
 ---
