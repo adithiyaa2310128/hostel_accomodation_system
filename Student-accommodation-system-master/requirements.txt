@@ -4,3 +4,6 @@ beautifulsoup4
 pandas
 numpy
 matplotlib
+
+#how to run:
+node app.js
